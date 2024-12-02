@@ -1,19 +1,17 @@
 # Instructions for running application
 1. Navigate to Project folder
-2. Open a virtual environment `source .venv/bin/activate`
-3. Build a docker image
-    `docker build --tag python-docker .`
-    `docker images`
-4. Run docker to start project 
-    `docker run <image ID>`
-    `docker run -p 5000:5000 python-docker`
-5. Open development server in browser
-6. Get started with CRUD operations in client or with the following CURL commands:
-SET: `curl -X POST http://127.0.0.1:5000/set_element -d "namespace=param1&key=param2&value=param3"`
-GET: `curl -X POST http://127.0.0.1:5000/get_element -d "namespace=param1&key=param2"`
-DELETE: `curl -X POST http://127.0.0.1:5000/delete_element -d "namespace=param1&key=param2"`
-COUNT: `curl -X POST http://127.0.0.1:5000/count_element -d "namespace=param1&value=param2"`
-COUNT GLOBAL: `curl -X POST http://127.0.0.1:5000/count_global_element -d "value=param1"`
+2. Build a docker image
+    * `docker build --tag python-docker .`
+    * `docker images`
+3. Run the docker image to start project
+    * `docker run <image ID>`
+    * `docker run -p 5000:5000 python-docker`
+4. Get started with CRUD operations in client at localhost:5000 or with the following CURL commands:
+* SET: `curl -X POST http://127.0.0.1:5000/set_element -d "namespace=param1&key=param2&value=param3"`
+* GET: `curl -X POST http://127.0.0.1:5000/get_element -d "namespace=param1&key=param2"`
+* DELETE: `curl -X POST http://127.0.0.1:5000/delete_element -d "namespace=param1&key=param2"`
+* COUNT: `curl -X POST http://127.0.0.1:5000/count_element -d "namespace=param1&value=param2"`
+* COUNT GLOBAL: `curl -X POST http://127.0.0.1:5000/count_global_element -d "value=param1"`
 
 # CURL command examples
 ## Scenario 1
