@@ -4,7 +4,6 @@
     * `docker build --tag python-docker .`
     * `docker images`
 3. Run the docker image to start project
-    * `docker run <image ID>`
     * `docker run -p 5000:5000 python-docker`
 4. Get started with CRUD operations in client at localhost:5000 or with the following CURL commands:
 * SET: `curl -X POST http://127.0.0.1:5000/set_element -d "namespace=param1&key=param2&value=param3"`
