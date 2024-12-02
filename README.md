@@ -14,18 +14,18 @@
 
 # CRUD + COUNT functionality
 * set - sets the key in the given namespace to the value.
-   Parameters: [namespace] [key] [value]
+    * Parameters: [namespace] [key] [value]
 * get - returns the value of the key in the given namespace in the database.
-  Parameters: [namespace] [key]
-  Returns: [value]
+    * Parameters: [namespace] [key]
+    * Returns: [value]
 * delete - deletes the value from the database.
-  Parameters: [namespace] [key]
+    * Parameters: [namespace] [key]
 * count - returns the number of records that have the given value assigned to them in a
 particular namespace. If that value is not assigned, returns 0.
-  Parameters: [namespace] [value]
+    * Parameters: [namespace] [value]
 * countGlobal - returns the number of records that have the given value assigned to
 them across all namespaces. If that value is not assigned, returns 0.
-  Parameters: [value]
+    * Parameters: [value]
 
 # CURL command examples
 ## Scenario 1
