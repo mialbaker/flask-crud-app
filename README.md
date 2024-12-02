@@ -1,4 +1,4 @@
-# Instructions for running application
+# Instructions for running the application
 1. Navigate to Project folder
 2. Build a docker image
     * `docker build --tag python-docker .`
@@ -11,6 +11,21 @@
 * DELETE: `curl -X POST http://127.0.0.1:5000/delete_element -d "namespace=param1&key=param2"`
 * COUNT: `curl -X POST http://127.0.0.1:5000/count_element -d "namespace=param1&value=param2"`
 * COUNT GLOBAL: `curl -X POST http://127.0.0.1:5000/count_global_element -d "value=param1"`
+
+# CRUD + COUNT functionality
+* set - sets the key in the given namespace to the value.
+   Parameters: [namespace] [key] [value]
+* get - returns the value of the key in the given namespace in the database.
+  Parameters: [namespace] [key]
+  Returns: [value]
+* delete - deletes the value from the database.
+  Parameters: [namespace] [key]
+* count - returns the number of records that have the given value assigned to them in a
+particular namespace. If that value is not assigned, returns 0.
+  Parameters: [namespace] [value]
+* countGlobal - returns the number of records that have the given value assigned to
+them across all namespaces. If that value is not assigned, returns 0.
+  Parameters: [value]
 
 # CURL command examples
 ## Scenario 1
